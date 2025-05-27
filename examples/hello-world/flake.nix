@@ -26,8 +26,8 @@
 	  postInstall = ''
 	    wrapProgram $out/bin/hello-world\
               --set LD_LIBRARY_PATH ${pkgs.lib.makeLibraryPath [ pkgs.openssl_3 ]}
-	  ''
-	}
+	  '';
+	};
 
       in rec {
         # For `nix build` & `nix run`:
